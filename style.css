@@ -1,12 +1,14 @@
 /** Variable Imports **/
-@import './variables.css';
+@import "./variables.css";
 
 /**
   CSS Reset
   Source: https://www.joshwcomeau.com/css/custom-css-reset/
 **/
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 /* 2. Remove default margin */
@@ -18,36 +20,176 @@ body {
   line-height: 1.5;
   /* 4. Improve text rendering */
   -webkit-font-smoothing: antialiased;
+  background-color: var(--clr-stone100);
+  margin: 7.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
 }
 /* 5. Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 /* 6. Inherit fonts for form controls */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 /* 7. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 /* 8. Improve line wrapping */
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 /*
   9. Create a root stacking context
 */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
 /** Your CSS Below **/
+.whole__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2.5rem;
+  background-color: white;
+  max-width: var(--width-desktop);
+  width: 740px;
+  border-radius: 25px;
+  color: var(--clr-stone600);
+}
+.whole__menu img {
+  border-radius: 10px;
+}
+.menu__title {
+  font-weight: var(--fw-bold);
+  font-size: var(--font-header);
+  font-family: var(--fs-accent);
+  color: var(--clr-stone900);
+}
+.menu__description {
+  font-weight: var(--fw-regular);
+  font-size: var(--font-paragraph);
+  font-family: var(--fs-base);
+}
+.preparation__time {
+  background-color: var(--clr-rose50);
+  padding: 1.8rem;
+  border-radius: 10px;
+  font-weight: var(--fw-regular);
+  font-size: var(--font-paragraph);
+  font-family: var(--fs-base);
+}
+
+h4 {
+  font-family: var(--fs-base);
+  font-size: 20px;
+  color: var(--clr-rose800);
+}
+h2 {
+  font-family: var(--fs-accent);
+  font-size: var(--font-sub-header);
+  font-weight: 300;
+  color: var(--clr-brown800);
+}
+.menu__ingredients {
+  font-weight: var(--fw-regular);
+  font-size: var(--font-paragraph);
+  font-family: var(--fs-base);
+}
+.menu__instructions {
+  font-weight: var(--fw-regular);
+  font-size: var(--font-paragraph);
+  font-family: var(--fs-base);
+}
+.nutrition__description {
+  font-weight: var(--fw-regular);
+  font-size: var(--font-paragraph);
+  font-family: var(--fs-base);
+}
+.nutrition__calories {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+}
+hr {
+  border: none;
+  height: 1px;
+  background-color: lightgray;
+  color: var(--clr-stone100);
+}
+.preparation__time ul li::marker {
+  color: var(--clr-rose800);
+}
+
+ul li::marker {
+  color: var(--clr-brown800);
+  font-size: 0.8em;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  position: relative;
+  padding-left: 35px;
+  margin: 10px;
+}
+ul li::before {
+  content: "•";
+  color: var(--clr-brown800);
+  font-size: 1.5em;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+ol li {
+  position: relative;
+  padding-left: 5px;
+  margin: 7px;
+}
+
+ol li::marker {
+  content: counter(list-item) ".      ";
+  font-weight: bold;
+  color: var(--clr-brown800);
+}
 
 /** Attribution CSS **/
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

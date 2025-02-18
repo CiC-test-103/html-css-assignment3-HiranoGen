@@ -7,14 +7,14 @@
 
 /** Fonts Imports **/
 @font-face {
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-display: swap;
-  src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf');
+  src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
 }
 @font-face {
-  font-family: 'Young-Serif';
+  font-family: "Young-Serif";
   font-display: swap;
-  src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf');
+  src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf");
 }
 
 /*
@@ -36,13 +36,13 @@
 
   /* Typography */
   --font-paragraph: 16px;
-  --font-header: 32px;
-  --font-sub-header: 24px;
+  --font-header: 38px;
+  --font-sub-header: 28px;
   --fw-regular: 400;
-  --fw-bold: 600;
+  --fw-bold: 400;
   --fw-black: 700;
 
   /* Fonts */
-  --fs-base: 'Outfit';
-  --fs-accent: 'Young-Serif';
+  --fs-base: "Outfit";
+  --fs-accent: "Young-Serif";
 }
