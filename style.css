@@ -187,7 +187,6 @@ ol li::marker {
   color: var(--clr-brown800);
 }
 
-/* 영양 정보 테이블 스타일 */
 .nutrition-table {
   width: 100%;
   border-collapse: collapse;
@@ -222,6 +221,53 @@ ol li::marker {
 .nutrition-text {
   padding: 5px;
 }
+
+@media (max-width: 768px) {
+  body {
+    margin: 3rem; /* 모바일에서 여백 줄이기 */
+  }
+  
+  .whole__menu {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    margin: 1rem;
+  }
+
+  .whole__menu {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .menu__title {
+    font-size: 1.3rem;
+  }
+
+  .times,
+  .menu__description,
+  .menu__ingredients,
+  .menu__instructions,
+  .nutrition-details {
+    font-size: 1rem;
+  }
+
+  .preparation__time {
+    padding: 15px;
+  }
+
+  .nutrition-table td {
+    font-size: 14px;
+  }
+}
+
 
 /** Attribution CSS **/
 .attribution {
