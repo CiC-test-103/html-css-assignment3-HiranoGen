@@ -84,15 +84,19 @@ h6 {
   width: 740px;
   border-radius: 25px;
   color: var(--clr-stone600);
+  font-family: var(--fs-base);
 }
 .whole__menu img {
   border-radius: 10px;
 }
 .menu__title {
-  font-weight: var(--fw-bold);
+  /* font-weight: var(--fw-bold); */
+  font-weight: 590;
   font-size: var(--font-header);
   font-family: var(--fs-accent);
   color: var(--clr-stone900);
+  line-height: 30px;
+  padding-top: 15px;
 }
 .menu__description {
   font-weight: var(--fw-regular);
@@ -101,8 +105,8 @@ h6 {
 }
 .preparation__time {
   background-color: var(--clr-rose50);
-  padding: 1.8rem;
-  border-radius: 10px;
+  padding: 25px;
+  border-radius: 15px;
   font-weight: var(--fw-regular);
   font-size: var(--font-paragraph);
   font-family: var(--fs-base);
@@ -118,6 +122,8 @@ h2 {
   font-size: var(--font-sub-header);
   font-weight: 300;
   color: var(--clr-brown800);
+  padding-top: 15px;
+  line-height: 0px;
 }
 .menu__ingredients {
   font-weight: var(--fw-regular);
@@ -144,16 +150,8 @@ hr {
   border: none;
   height: 1px;
   background-color: lightgray;
-  color: var(--clr-stone100);
-}
-.preparation__time ul li::marker {
-  color: var(--clr-rose800);
 }
 
-ul li::marker {
-  color: var(--clr-brown800);
-  font-size: 0.8em;
-}
 ul {
   list-style: none;
   padding-left: 0;
@@ -173,6 +171,10 @@ ul li::before {
   top: 50%;
   transform: translateY(-50%);
 }
+.times li::before {
+  color: var(--clr-rose800);
+}
+
 ol li {
   position: relative;
   padding-left: 5px;
@@ -183,6 +185,42 @@ ol li::marker {
   content: counter(list-item) ".      ";
   font-weight: bold;
   color: var(--clr-brown800);
+}
+
+/* 영양 정보 테이블 스타일 */
+.nutrition-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.nutrition-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.nutrition-table tr:last-child td {
+  border-bottom: none; /* 마지막 행은 밑줄 제거 */
+}
+
+.nutrition-table td:first-child {
+  font-weight: var(--fw-regular);
+  padding-left: 30px;
+  width: 50%;
+}
+
+.nutrition-table td:last-child {
+  text-align: left;
+  font-weight: bold;
+  color: var(--clr-brown800);
+}
+.nutrition-details {
+  gap: 0px;
+}
+.nutrition-text {
+  padding: 5px;
 }
 
 /** Attribution CSS **/
