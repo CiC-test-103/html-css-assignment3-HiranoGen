@@ -147,9 +147,9 @@ h2 {
   padding: 10px;
 }
 hr {
-  border: none;
+  border: 0;
   height: 1px;
-  background-color: lightgray;
+  background-color: var(--clr-stone150);
 }
 
 ul {
